@@ -12,10 +12,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        theme: ['Enigma', 'Icewall', 'Tinker','Rubic']
-        type: ['Full','Starter']
 
     steps:
       - uses: actions/checkout@v2
@@ -26,29 +22,28 @@ jobs:
           node-version: '16.17.0'
 
       - name: build enigma-full
-        working-directory: ./${{ matrix.theme }}/${{ matrix.type }}
+        working-directory: ./Enigma/Full
         run: |
           npm install
           npm run build
-      
-#      - name: build icewall-full
-#        working-directory: ./Icewall/Full
-#        run: |
-#          npm install
-#          npm run build
-#          
-#      - name: build rubic-full
-#        working-directory: ./Rubic/Full
-#        run: |
-#          npm install
-#         npm run build          
-      
-#      - name: build tinker-full
-#        working-directory: ./Tinker/Full
-#        run: |
-#          npm install
-#          npm run build
-
+          
+      - name: build enigma-starter
+        working-directory: ./Enigma/Starter
+        run: |
+          npm install
+          npm run build
+          
+      - name: build icewall-full
+        working-directory: ./Icewall/Full
+        run: |
+          npm install
+          npm run build
+      - name: build icewall-starter
+        working-directory: ./Icewall/Starter
+        run: |
+          npm install
+          npm run build
+    
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2

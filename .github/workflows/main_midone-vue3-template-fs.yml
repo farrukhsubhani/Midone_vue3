@@ -25,47 +25,49 @@ jobs:
         working-directory: ./Enigma/Full
         run: |
           npm install
-          npm run build
+          npm run build:azure
           
       - name: build enigma-starter
         working-directory: ./Enigma/Starter
         run: |
           npm install
-          npm run build
+          npm run build:azure
           
       - name: build icewall-full
         working-directory: ./Icewall/Full
         run: |
           npm install
-          npm run build
+          npm run build:azure
+          
       - name: build icewall-starter
         working-directory: ./Icewall/Starter
         run: |
           npm install
-          npm run build
+          npm run build:azure
       
       - name: build tinker-full
         working-directory: ./Tinker/Full
         run: |
           npm install
-          npm run build
+          npm run build:azure
           
       - name: build tinker-starter
         working-directory: ./Tinker/Starter
         run: |
           npm install
-          npm run build
+          npm run build:azure
           
       - name: build rubic-full
         working-directory: ./Rubic/Full
         run: |
           npm install
-          npm run build
+          npm run build:azure
+          
       - name: build rubic-starter
         working-directory: ./Rubic/Starter
         run: |
           npm install
-          npm run build
+          npm run build:azure
     
       - name: Deploy to Azure Web App
         id: deploy-to-webapp

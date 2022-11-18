@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - midone-vue3-template-fs
+name: main:Build:All:Deploy:Azure
 
 on:
   push:
@@ -12,6 +12,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        theme: ['Enigma', 'Icewall', 'Tinker','Rubic']
+        type: ['Full','Starter']
 
     steps:
       - uses: actions/checkout@v2
@@ -21,29 +25,29 @@ jobs:
         with:
           node-version: '16.17.0'
 
-      - name: build enigma
-        working-directory: ./Enigma
+      - name: build enigma-full
+        working-directory: ./${{ matrix.theme }}/${{ matrix.type }}
         run: |
           npm install
           npm run build
       
-      - name: build icewall
-        working-directory: ./Icewall
-        run: |
-          npm install
-          npm run build
-          
-      - name: build rubic
-        working-directory: ./Rubic
-        run: |
-          npm install
-          npm run build
-          
-      - name: build Tinker
-        working-directory: ./Tinker
-        run: |
-          npm install
-          npm run build
+#      - name: build icewall-full
+#        working-directory: ./Icewall/Full
+#        run: |
+#          npm install
+#          npm run build
+#          
+#      - name: build rubic-full
+#        working-directory: ./Rubic/Full
+#        run: |
+#          npm install
+#         npm run build          
+      
+#      - name: build tinker-full
+#        working-directory: ./Tinker/Full
+#        run: |
+#          npm install
+#          npm run build
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp

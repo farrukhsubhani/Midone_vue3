@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:azure": "vite build --base /icewall-full/",
     "preview": "vite preview"
   },
   "dependencies": {

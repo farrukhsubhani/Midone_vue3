@@ -43,6 +43,29 @@ jobs:
         run: |
           npm install
           npm run build
+      
+      - name: build tinker-full
+        working-directory: ./Tinker/Full
+        run: |
+          npm install
+          npm run build
+          
+      - name: build tinker-starter
+        working-directory: ./Tinker/Starter
+        run: |
+          npm install
+          npm run build
+          
+      - name: build rubic-full
+        working-directory: ./Rubic/Full
+        run: |
+          npm install
+          npm run build
+      - name: build rubic-starter
+        working-directory: ./Rubic/Starter
+        run: |
+          npm install
+          npm run build
     
       - name: Deploy to Azure Web App
         id: deploy-to-webapp

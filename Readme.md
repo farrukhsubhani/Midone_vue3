@@ -1,7 +1,23 @@
 # Midone Vue 3
 
-Hosted on Azure as a sample static apps
-Enigma: <https://midone-vue3-template-fs.azurewebsites.net/Enigma>
-Icewall: <https://midone-vue3-template-fs.azurewebsites.net/Icewall>
-Rubic: <https://midone-vue3-template-fs.azurewebsites.net/Rubic>
-Tinker: <https://midone-vue3-template-fs.azurewebsites.net/Tinker>
+Home: <https://midone-vue3-template-fs.azurewebsites.net/>
+
+## Enigma
+
+Starter: <https://midone-vue3-template-fs.azurewebsites.net/enigma-starter/>
+Full: <https://midone-vue3-template-fs.azurewebsites.net/enigma-full/>
+
+## Icewall
+
+Starter: <https://midone-vue3-template-fs.azurewebsites.net/icewall-starter/>
+Full: <https://midone-vue3-template-fs.azurewebsites.net/icewall-full/>
+
+## Rubic
+
+Starter: <https://midone-vue3-template-fs.azurewebsites.net/rubic-starter/>
+Full: <https://midone-vue3-template-fs.azurewebsites.net/rubic-full/>
+
+## Tinker
+
+Starter: <https://midone-vue3-template-fs.azurewebsites.net/tinker-starter/>
+Full: <https://midone-vue3-template-fs.azurewebsites.net/tinker-full/>

@@ -1103,7 +1103,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  base:location.pathname
+  base:location.pathname,
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
